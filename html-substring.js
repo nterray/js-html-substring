@@ -57,15 +57,16 @@ function html_substr(src, length, suffix){
             cnt++;
         }
     }
+    if (suffix !== false) {
+        str += ((typeof suffix == "undefined" || suffix === true) ? "…" : suffix);
+    }
     //Go trough all open tags and close them
     if(tagTree.length > 0) {
         for(i = tagTree.length - 1;i>=0;i--) {
             str += "</" + tagTree[i] + ">";
         }                           
     }
-    //Return final cutted content and put suffix after it
-    if(suffix === false) return str;
-    return str + ((typeof suffix == "undefined" || suffix === true) ? "..." : suffix);
+    return str;
 }
 if (module && module.exports) {
     module.exports = html_substr;

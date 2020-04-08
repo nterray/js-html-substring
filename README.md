@@ -20,7 +20,7 @@ JavaScript code that allows to substring of html content. Only actual text conte
 
 ```js
 html_substr("<ul><li>ggg</li><li>mmm</li><li>ccc</li></ul> ddd eee", 5); //Direct use trough prototype
-"<ul><li>ggg</li><li>mm</li></ul>..." //Output
+"<ul><li>ggg</li><li>mm…</li></ul>" //Output
 ```
 
 # Examples
@@ -28,17 +28,17 @@ html_substr("<ul><li>ggg</li><li>mmm</li><li>ccc</li></ul> ddd eee", 5); //Direc
 //Typical case
 //Single tag is opened and closed (no nesting)
 html_substr("<b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit.", 9);
-"<b>Lorem ips</b>" //Output
+"<b>Lorem ips…</b>" //Output
 ```
 
 ```js
 //Nested case
 //Multiple open tags at once
 html_substr("<b><i>Lorem</i> ipsum</b> dolor sit amet, consectetuer adipiscing elit.", 9);
-"<b><i>Lorem</i> ips</b>" //Output
+"<b><i>Lorem</i> ips…</b>" //Output
 
 html_substr("<b><i>Lorem</i> ipsum</b> dolor sit amet, consectetuer adipiscing elit.", 3);
-"<b><i>Lor</i></b>" //Output
+"<b><i>Lor…</i></b>" //Output
 ```
 
 ```js
@@ -52,5 +52,5 @@ html_substr("<b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit.", 
 //Custom suffix
 //In case you want custom suffix or no suffix, last argument of the function can be boolean or string
 html_substr("<b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit.", 5, " cutted");
-"<b>Lorem</b> cutted" //Output
+"<b>Lorem cutted</b>" //Output
 ```

@@ -55,7 +55,7 @@ describe('html-substring', function(){
         it('should copy tags with arguments as is', function(){
             assert.equal(
                 html_substr("short <span style=\"color: #F00\">text</span> etc", 8),
-                "short <span style=\"color: #F00\">te</span>..."
+                "short <span style=\"color: #F00\">te…</span>"
             );
         });
     }); 
@@ -64,7 +64,7 @@ describe('html-substring', function(){
         it('should append "..."', function(){
             assert.equal(
                 html_substr("short <span>text</span>", 5),
-                "short..."
+                "short…"
         	);
         });
     });
